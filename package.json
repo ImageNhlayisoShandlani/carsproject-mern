@@ -1,0 +1,26 @@
+{
+  "name": "cars_api",
+  "version": "1.0.0",
+  "description": "This is the backend conatining many cars listings",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./backend/server.js",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "nodemon ./backend/server.js",
+    "dev-all": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "importData": "nodemon ./backend/seeder.js"
+  },
+  "author": "Image Shandlani",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.2"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2",
+    "nodemon": "^3.1.14"
+  }
+}
