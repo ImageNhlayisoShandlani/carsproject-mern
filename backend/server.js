@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors"
 import { CARS, CAR_Type, CAR_Make } from "./db/cars.js";
 import router from "./routes/productRoutes.js";
 import { connectDB } from "./config/dbConnect.js";
@@ -10,7 +11,7 @@ const server = express();
 connectDB();
 
 
-
+server.use(cors());
 server.use("/cars", router)
 server.use("/cars/:id", router)
 server.listen(PORT, () => {

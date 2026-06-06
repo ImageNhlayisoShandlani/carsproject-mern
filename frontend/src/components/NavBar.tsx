@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText, Box, Link } from '@mui/material';
+import { useState } from 'react';
+import { AppBar, Toolbar, IconButton, Button, Drawer, List, ListItem, ListItemText, Box, Link,  } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navItems = ['Home', 'About', 'Contact'];
+  const navItems = ['Home', 'Makes', 'Types', 'Contact'];
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar color='primary' position='sticky'>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>LOGO</Typography>
+          <Box sx={{ flexGrow: 1 }}>
+            <Logo />
+          </Box>
           
           {/* Desktop Links (Hidden on Mobile) */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>

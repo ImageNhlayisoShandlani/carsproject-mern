@@ -26,6 +26,22 @@ const carsSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    kms: {
+      type: Number,
+      required: true
+    },
+    makebage: {
+      type: String,
+      required: false
+    },
+    serviceHistory: {
+      type: Object,
+      required: true
+    },
+    overallCondition: {
+      type: String,
+      required: true
+    },
     image: {
       type: String,
       required: true,
